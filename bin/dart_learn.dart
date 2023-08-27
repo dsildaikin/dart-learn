@@ -8,4 +8,6 @@ void main() {
     ..display();
 
   Bus vwTransporter = Bus('Marina Blue', 249, 'intercity')..display();
+
+  Car isuzu = Bus('white', 221, 'airport')..display();
 }
