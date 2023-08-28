@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Car {
   String _color;
   int _hp;
@@ -49,5 +51,33 @@ class Bus extends Car {
   void display() {
     super.display();
     print('  type of bus: $_busType');
+  }
+}
+
+abstract class Shape {
+  void calculateArea();
+}
+
+class Square extends Shape {
+  final double _sideLength;
+
+  Square(this._sideLength);
+
+  @override
+  void calculateArea() {
+    print(
+        'The area of a square with a side of $_sideLength meters is ${pow(_sideLength, 2)} square meters.');
+  }
+}
+
+class Circle extends Shape {
+  final double _radius;
+
+  Circle(this._radius);
+
+  @override
+  void calculateArea() {
+    print(
+        'The area of a circle with a radius of $_radius meters is ${pi * pow(_radius, 2)} square meters.');
   }
 }

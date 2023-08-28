@@ -10,4 +10,7 @@ void main() {
   Bus vwTransporter = Bus('Marina Blue', 249, 'intercity')..display();
 
   Car isuzu = Bus('white', 221, 'airport')..display();
+
+  Shape sq = Square(12)..calculateArea();
+  Shape circle = Circle(10)..calculateArea();
 }
