@@ -13,4 +13,7 @@ void main() {
 
   Shape sq = Square(12)..calculateArea();
   Shape circle = Circle(10)..calculateArea();
+
+  Duck duck = Duck()..fly();
+  Salmon salmon = Salmon()..swim();
 }

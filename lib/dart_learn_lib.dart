@@ -81,3 +81,39 @@ class Circle extends Shape {
         'The area of a circle with a radius of $_radius meters is ${pi * pow(_radius, 2)} square meters.');
   }
 }
+
+abstract class Flyable {
+  void fly();
+}
+
+abstract class Swimmable {
+  void swim();
+}
+
+abstract class Bird implements Flyable {
+  @override
+  void fly() {
+    print("The bird is flying.");
+  }
+}
+
+abstract class Fish implements Swimmable {
+  @override
+  void swim() {
+    print("The fish is swimming.");
+  }
+}
+
+class Duck extends Bird {
+  @override
+  void fly() {
+    print("The duck is flying.");
+  }
+}
+
+class Salmon extends Fish {
+  @override
+  void swim() {
+    print("The salmon is swimming.");
+  }
+}
