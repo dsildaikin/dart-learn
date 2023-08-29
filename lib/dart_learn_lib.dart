@@ -137,3 +137,15 @@ class Ebook with Book, File {
   @override
   void download() => print("Download the book $_title $_size GB");
 }
+
+class User<T> {
+  final T _id;
+  final String _name;
+
+  User({required T id, required String name})
+      : _id = id,
+        _name = name {
+    print(
+        'The server was logged in by a user with id $_id and the name of $_name at ${DateTime.now()}');
+  }
+}

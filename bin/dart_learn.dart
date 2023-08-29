@@ -20,4 +20,7 @@ void main() {
   Ebook eBook = Ebook('White Fang', 5)
     ..download()
     ..read();
+
+  User user1 = User(id: 423, name: 'Alexandra');
+  User user2 = User(id: 5314, name: 'Vasiliy');
 }
