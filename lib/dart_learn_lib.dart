@@ -117,3 +117,25 @@ class Salmon extends Fish {
     print("The salmon is swimming.");
   }
 }
+
+class Book {
+  String title; // название книги
+  Book(this.title);
+
+  void read() => print("Читаем книгу \"$title\"");
+}
+
+class File {
+  int size = 0; // размер файла
+  void download() => print("Загружаем файл");
+}
+
+class Ebook extends Book implements File {
+  Ebook(super.title, this.size);
+
+  @override
+  int size;
+
+  @override
+  void download() => print("Загружаем книгу $title, весом $size ГБ");
+}

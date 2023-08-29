@@ -16,4 +16,8 @@ void main() {
 
   Duck duck = Duck()..fly();
   Salmon salmon = Salmon()..swim();
+
+  Ebook eBook = Ebook('agusha', 5)
+    ..download()
+    ..read();
 }
