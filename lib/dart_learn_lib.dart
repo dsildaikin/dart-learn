@@ -118,24 +118,22 @@ class Salmon extends Fish {
   }
 }
 
-class Book {
-  String title; // название книги
-  Book(this.title);
-
-  void read() => print("Читаем книгу \"$title\"");
+mixin Book {
+  String _title = ''; // название книги
+  void read() => print("Reading a book \"$_title\"");
 }
 
-class File {
-  int size = 0; // размер файла
-  void download() => print("Загружаем файл");
+mixin File {
+  int _size = 0; // размер файла
+  void download() => print("Download file");
 }
 
-class Ebook extends Book implements File {
-  Ebook(super.title, this.size);
+class Ebook with Book, File {
+  Ebook(String title, int size) {
+    _title = title;
+    _size = size;
+  }
 
   @override
-  int size;
-
-  @override
-  void download() => print("Загружаем книгу $title, весом $size ГБ");
+  void download() => print("Download the book $_title $_size GB");
 }
