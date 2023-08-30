@@ -158,3 +158,26 @@ class User<T> {
         'The server was logged in by a user with id $_id and the name of $_name at ${DateTime.now()}');
   }
 }
+
+enum OrderStatus { accepted, processing, shipped, delivered }
+
+class Order {
+  final String _name;
+
+  Order(this._name);
+  void runOperation(OrderStatus orderStatus) {
+    switch (orderStatus) {
+      case OrderStatus.accepted:
+        print('Order $_name is accepted');
+        break;
+      case OrderStatus.processing:
+        print('Order $_name is processing');
+        break;
+      case OrderStatus.shipped:
+        print('Order $_name is shipped');
+        break;
+      case OrderStatus.delivered:
+        print('Order $_name is delivered');
+    }
+  }
+}

@@ -31,4 +31,6 @@ void main() {
       'After adding pictures to the "${eBook2.title}" book, the book file size became ${eBook2Pictures.size} Gb');
 
   print(eBook < eBook2);
+
+  Order ali = Order('AliExpress package')..runOperation(OrderStatus.shipped);
 }
