@@ -134,8 +134,17 @@ class Ebook with Book, File {
     _size = size;
   }
 
+  String get title => _title;
+
+  int get size => _size;
+
+  Ebook operator +(int sizePicturesBook) =>
+      Ebook(_title, _size + sizePicturesBook);
+
+  bool operator <(Ebook otherEbook) => _size < otherEbook._size;
+
   @override
-  void download() => print("Download the book $_title $_size GB");
+  void download() => print("Download the book $_title $_size Gb");
 }
 
 class User<T> {

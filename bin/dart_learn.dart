@@ -20,7 +20,15 @@ void main() {
   Ebook eBook = Ebook('White Fang', 5)
     ..download()
     ..read();
+  Ebook eBook2 = Ebook('Mymy', 3);
 
   User user1 = User(id: 423, name: 'Alexandra');
   User user2 = User(id: 5314, name: 'Vasiliy');
+
+  Ebook eBook2Pictures = eBook2 + 4;
+
+  print(
+      'After adding pictures to the "${eBook2.title}" book, the book file size became ${eBook2Pictures.size} Gb');
+
+  print(eBook < eBook2);
 }
