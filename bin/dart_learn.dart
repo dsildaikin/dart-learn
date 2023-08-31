@@ -32,5 +32,11 @@ void main() {
 
   print(eBook < eBook2);
 
-  Order ali = Order('AliExpress package')..runOperation(OrderStatus.shipped);
+  Order ali = Order('AliExpress package')
+    ..runOperation(OrderStatus.shipped)
+    ..printThanks();
+}
+
+extension on Order {
+  void printThanks() => print('Thank you for your order!');
 }

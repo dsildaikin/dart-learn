@@ -165,6 +165,7 @@ class Order {
   final String _name;
 
   Order(this._name);
+
   void runOperation(OrderStatus orderStatus) {
     switch (orderStatus) {
       case OrderStatus.accepted:
