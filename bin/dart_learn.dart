@@ -71,17 +71,29 @@ void main() {
     Person('Ivan', 21),
     Person('Dmitrii', 24),
     Person('Alexei', 19),
-    Person('Darya', 21)
+    Person('Darya', 21),
+    Person('Valeriya', 20)
   ];
 
   personList.sort((a, b) => b.age - a.age);
   for (var person in personList) {
     print('Employee ${person.name} - ${person.age} y.o.');
   }
-
   Set<String> set = {};
   set.addAll(week);
   print(set);
+
+  Map<int, String> students = {};
+  for (int i = 0; i < 5; i++) {
+    int id = i;
+    String name = personList[i].name;
+    students[id] = name;
+  }
+  students.forEach(
+    (id, name) {
+      print('id: $id\tname: $name');
+    },
+  );
 }
 
 extension on Order {
