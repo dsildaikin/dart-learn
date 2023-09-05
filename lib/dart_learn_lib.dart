@@ -182,3 +182,9 @@ class Order {
     }
   }
 }
+
+class Person {
+  String name; // имя
+  int age; // возраст
+  Person(this.name, this.age);
+}

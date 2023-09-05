@@ -35,6 +35,49 @@ void main() {
   Order ali = Order('AliExpress package')
     ..runOperation(OrderStatus.shipped)
     ..printThanks();
+
+  List<int> list = [1, 3, 5, 6, 7];
+  for (var element in list) {
+    print('Element $element');
+  }
+
+  var list2 = ["Tom", "Alice", "Bob", "Sam", "Kate"];
+  list2.removeWhere((item) => item.length == 3);
+  print(list2);
+
+  // sort() parameter a>b return a; a<b return b; a==b return 0
+
+  List<int> list4 = List.filled(10, 4);
+  var list5 = List.generate(12, (int index) => index);
+  print(list4);
+  print(list5);
+
+  List<String> week = [];
+  week.add('Monday');
+  week.add('Tuesday');
+  week.add('Wednesday');
+  week.add('Thursday');
+  week.add('Friday');
+  week.add('Saturday');
+  week.add('Sunday');
+  week.forEach(print);
+  week.removeRange(5, 7);
+  print(week);
+
+  final week2 = week;
+  print(week);
+
+  var personList = [
+    Person('Ivan', 21),
+    Person('Dmitrii', 24),
+    Person('Alexei', 19),
+    Person('Darya', 21)
+  ];
+
+  personList.sort((a, b) => b.age - a.age);
+  for (var person in personList) {
+    print('Employee ${person.name} - ${person.age}');
+  }
 }
 
 extension on Order {
