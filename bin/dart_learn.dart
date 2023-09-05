@@ -76,8 +76,12 @@ void main() {
 
   personList.sort((a, b) => b.age - a.age);
   for (var person in personList) {
-    print('Employee ${person.name} - ${person.age}');
+    print('Employee ${person.name} - ${person.age} y.o.');
   }
+
+  Set<String> set = {};
+  set.addAll(week);
+  print(set);
 }
 
 extension on Order {
