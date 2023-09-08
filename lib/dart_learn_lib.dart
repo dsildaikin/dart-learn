@@ -27,7 +27,7 @@ class Car {
       color = 'undefined';
     }
     if (hp < 300) {
-      hp = 0;
+      throw HpException(hp);
     }
     return Car._create(color, hp);
   }
@@ -40,6 +40,17 @@ class Car {
         '  hp: $_hp\n'
         '  electric engine: $isElectric');
   }
+}
+
+class HpException implements Exception {
+  final int _value;
+
+  HpException(this._value);
+
+  int get value => _value;
+
+  @override
+  String toString() => 'Invalid hp';
 }
 
 class Bus extends Car {
