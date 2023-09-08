@@ -1,6 +1,10 @@
 import 'package:dart_learn/dart_learn_lib.dart';
 
 void main() {
+  Future<void> futureTest = Future.delayed(
+    Duration(seconds: 2),
+    () => print('=====hi, future====='),
+  );
   try {
     Car ix60 = Car('black', 230)
       ..display()
@@ -99,6 +103,7 @@ void main() {
       print('id: $id\tname: $name');
     },
   );
+  print('\n----main() ends-----\n');
 }
 
 extension on Order {
